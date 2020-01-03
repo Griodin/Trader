@@ -1,0 +1,9 @@
+{
+  "name": "trader",
+  "version": "0.0.0",
+  "description": "Trader",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
