@@ -23,3 +23,8 @@ Open to suggestions, I am looking for simple.  This is only for learning how all
 
 for this first part, I am trying to build decent charts to read from a exchange api JSON or possibly back data from a database.
 Inorder to get to the next step I need to figure out how to get the basic chart loaded.
+
+## References:
+* D3 https://d3js.org/ 
+* D3FC https://d3fc.io/
+* Requirejs https://requirejs.org/
