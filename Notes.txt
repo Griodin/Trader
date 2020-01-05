@@ -1,3 +1,26 @@
 
+        case '/':
+            var rs = fs.createReadStream('', 'utf8');
+            rs.pipe(response);
+            break;
+
+    <script src="node_modules/d3/dist/d3.min.js"></script>
+    <script src="node_modules/d3fc/build/d3fc.min.js"></script>
+
+	define(function (require) {
+    var d3 = require("d3");
+    var fc = require("d3fc");
+    var Symbol = require("es6-symbol");
+});
 
 
+<script src="chart.js"></script>
+<script src="node_modules/requirejs/require.js"></script>
+
+Navigate to D:\OneDrive\Nodejs\Trader\Trader>
+execute watchify bundle.js -o distBundle.js -d -v
+
+this required npm install -g browserify, watchify
+
+
+<script type="text/javascript" src="distBundle.js"></script>
