@@ -17,14 +17,24 @@ Nodejs, JavaScript, HTML, CSS, ?
 * 9: Impliment strategy.
 	* a: for strategy to go live it must be tested with back data, then live data. (Workflow)
 
-## Notes:
-This doesn't work but I am trying to get Nodejs, requirejs, d3, d3fc to all work together.
+This doesn't work but I am trying to get Nodejs, browserify, d3, d3fc to all work together.
 Open to suggestions, I am looking for simple.  This is only for learning how all these things work together.
 
 for this first part, I am trying to build decent charts to read from a exchange api JSON or possibly back data from a database.
 Inorder to get to the next step I need to figure out how to get the basic chart loaded.
 
+## Notes:
+&#35;1: made progress on getting things loaded by switching to browserify.
+I was able to get it to re-browserify bundle.js to distBundle.js at runtime in the server.js.
+I now have a candlestick chart with static data and playing with things like indicators, menu, buttons, etc.
+
+Now that I am thinking about it, I might be able to do a single browerify on homepage first load.
+
+## Things I still want to figure out:
+How to include a normal js files that may not be functions.
+Better ways to split code up.
+
 ## References:
 * D3 https://d3js.org/ 
 * D3FC https://d3fc.io/
-* Requirejs https://requirejs.org/
+* Browserify http://browserify.org/

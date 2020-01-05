@@ -11,8 +11,5 @@
     "d3": "^5.15.0",
     "d3fc": "^14.0.60",
     "watchify": "^3.11.1"
-  },
-  "scripts": {
-    "start": "watchify bundle.js -o distBundle.js -d"
   }
 }
