@@ -1,30 +1,74 @@
 ﻿var d3 = require("d3");
 var fc = require("d3fc");
 
-// JavaScript source code
-var data = fc.randomFinancial()(50);
-var yExtent = fc.extentLinear()
-    .accessors([
-        function (d) { return d.high; },
-        function (d) { return d.low; }
-    ]);
+// create two different series types for rendering the data
+const candlestickSeries = fc.seriesSvgCandlestick()
+    .bandwidth(3);
 
-var xExtent = fc.extentDate()
-    .accessors([function (d) { return d.date; }]);
+const movingAverageSeries = fc.seriesSvgLine()
+    .mainValue(d => d.ma)
+    .crossValue(d => d.date);
 
-var gridlines = fc.annotationSvgGridline();
-var candlestick = fc.seriesSvgCandlestick();
-var multi = fc.seriesSvgMulti()
-    .series([gridlines, candlestick]);
 
-var chart = fc.chartCartesian(
-    fc.scaleDiscontinuous(d3.scaleTime()),
+// merge into a single series that is associated with the chart
+const mergedSeries = fc.seriesSvgMulti()
+    .series([movingAverageSeries, candlestickSeries]);
+
+// adapt the d3 time scale to add discontinuities, so that weekends are removed
+const xScale = fc.scaleDiscontinuous(d3.scaleTime())
+    .discontinuityProvider(fc.discontinuitySkipWeekends());
+
+const chart = fc.chartCartesian(
+    xScale,
     d3.scaleLinear()
 )
-    .yDomain(yExtent(data))
-    .xDomain(xExtent(data))
-    .svgPlotArea(multi);
+    .yOrient('left')
+    .svgPlotArea(mergedSeries);
 
-d3.select('#chart')
-    .datum(data)
-    .call(chart);
+// use the extent component to determine the x and y domain
+const durationDay = 864e5;
+const xExtent = fc.extentDate()
+    .accessors([d => d.date])
+    // pad by one day on either side of the scale
+    .padUnit('domain')
+    .pad([durationDay, durationDay]);
+
+// the y extent is based on the high / lowr values, which provide the two extremes
+const yExtent = fc.extentLinear()
+    .accessors([d => d.high, d => d.low])
+    // pad by 10% up and down
+    .pad([0.1, 0.1]);
+
+const parseDate = d3.timeParse("%d-%b-%y");
+
+const ma = fc.indicatorMovingAverage()
+    .value(d => d.open);
+
+d3.csv('data.csv',
+    row => ({
+        open: Number(row.Open),
+        close: Number(row.Close),
+        high: Number(row.High),
+        low: Number(row.Low),
+        date: parseDate(row.Date)
+    })).then(data => {
+
+        // compute the moving average data
+        const maData = ma(data);
+
+        // merge into a single series
+        const mergedData = data.map((d, i) =>
+            Object.assign({}, d, {
+                ma: maData[i]
+            })
+        );
+
+        // set the domain based on the data
+        chart.xDomain(xExtent(mergedData))
+            .yDomain(yExtent(mergedData))
+
+        // select and render
+        d3.select('#chart')
+            .datum(mergedData)
+            .call(chart);
+    });

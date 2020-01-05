@@ -43,6 +43,7 @@
     <Compile Include="server.js" />
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="data.csv" />
     <Content Include="favicon.ico" />
     <Content Include="Notes.txt" />
     <Content Include="package.json" />

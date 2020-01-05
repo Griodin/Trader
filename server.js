@@ -46,6 +46,9 @@ http.createServer(function (request, response) {
         case '.html':
             response.writeHead(200, { 'Content-Type': 'text/html' });
             break;
+        case '.csv':
+            response.writeHead(200, { 'Content-Type': 'text/csv' });
+            break;
         case '.js':
             response.writeHead(200, { 'Content-Type': 'text/javascript' });
             break;
@@ -100,6 +103,10 @@ http.createServer(function (request, response) {
             break;
         case '/main.js':
             var rs = fs.createReadStream('main.js', 'utf8');
+            rs.pipe(response);
+            break;
+        case '/data.csv':
+            var rs = fs.createReadStream('data.csv', 'utf8');
             rs.pipe(response);
             break;
         case '/distChart.js':
