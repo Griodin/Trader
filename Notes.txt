@@ -17,7 +17,7 @@
 <script src="chart.js"></script>
 <script src="node_modules/requirejs/require.js"></script>
 
-Navigate to D:\OneDrive\Nodejs\Trader\Trader>
+Navigate to D:\OneDrive\Nodejs\Trader\Trader
 execute watchify bundle.js -o distBundle.js -d -v
 
 this required npm install -g browserify, watchify

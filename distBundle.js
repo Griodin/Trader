@@ -2,11 +2,8 @@
 var d3 = require("d3");
 var fc = require("d3fc");
 
-alert("testing need to make a change, 8");
-
 // JavaScript source code
 var data = fc.randomFinancial()(50);
-alert(data)
 var yExtent = fc.extentLinear()
     .accessors([
         function (d) { return d.high; },
