@@ -73,6 +73,14 @@ d3.csv('data.csv',
             .datum(mergedData)
             .call(chart);
     });
+
+
+function bla(color) {
+    d3.select("#chart")
+        .transition()
+        .duration(2000)
+        .style("fill",color)
+}
 },{"d3":33,"d3fc":34}],2:[function(require,module,exports){
 // https://d3js.org/d3-array/ v1.2.4 Copyright 2018 Mike Bostock
 (function (global, factory) {

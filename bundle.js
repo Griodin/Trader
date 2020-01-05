@@ -72,3 +72,11 @@ d3.csv('data.csv',
             .datum(mergedData)
             .call(chart);
     });
+
+
+function bla(color) {
+    d3.select("#chart")
+        .transition()
+        .duration(2000)
+        .style("fill",color)
+}
