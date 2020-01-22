@@ -4,17 +4,17 @@
 Nodejs, JavaScript, HTML, CSS, ?
 
 ## Objectives:
-* End: Buiding a Trading Bot (Optimistic Goal) (Crypto, or maybe Stock as well)
-* 1: Build a Financial Chart with Indicators like EMA (Static Data)
-	* a: D3 seemed like a possible option
-* 2: Link Chart to RealTime data from a exchange api
-* 3: Store data in database for history tracking and trend analysis
-* 4: If possible find back data for 2+ years or more.
-* 5: Using the back data define a good buy/sell practice.
-* 6: Develop a strategy to get my result.
-* 7: Design a way to test strategy.
-* 8: Design a way to future test strategy.
-* 9: Impliment strategy.
+*[] End: Buiding a Trading Bot (Optimistic Goal) (Crypto, or maybe Stock as well)
+*[] 1: Build a Financial Chart with Indicators like EMA (Static Data)
+	*[] a: D3 seemed like a possible option
+*[] 2: Link Chart to RealTime data from a exchange api
+*[] 3: Store data in database for history tracking and trend analysis
+*[] 4: If possible find back data for 2+ years or more.
+*[] 5: Using the back data define a good buy/sell practice.
+*[] 6: Develop a strategy to get my result.
+*[] 7: Design a way to test strategy.
+*[] 8: Design a way to future test strategy.
+*[] 9: Impliment strategy.
 	* a: for strategy to go live it must be tested with back data, then live paper trade. (Workflow)
 
 This doesn't work but I am trying to get Nodejs, browserify, d3, d3fc to all work together.
@@ -59,6 +59,7 @@ Was unable to figure out how to add indicators, menus, etc. at this time.  Did t
 * added config.js, will be where secrets are stored.  Not OK for github.  (require('./config.js');)
 * added config.js.example, template for the config.js file with instructions.
 
+```
   "dependencies": {
     "browserify": "^16.5.0",
     "d3": "^5.15.0",
@@ -66,6 +67,7 @@ Was unable to figure out how to add indicators, menus, etc. at this time.  Did t
     "dotenv": "^8.2.0",
     "watchify": "^3.11.1"
   }
+```
 
 ~01/04/2020: Close enough to the original start of this.
 * Created the basic structure and started everything.  Not going to define everything that changed during this time.
@@ -73,3 +75,24 @@ Was unable to figure out how to add indicators, menus, etc. at this time.  Did t
 
 ## Readme Notes:
 &#35;  #
+
+&#35; The largest Heading
+&#35;&#35; The second largest heading
+&#35;&#35;&#35; The smallest heading
+
+**This is bold text**
+*This text is italicized*
+~~This was mistaken text~~
+**This text is _extremely_ important**
+***All this text is important***
+
+You can quote text with a >
+
+Code inline with `code`
+
+```
+Code Block
+```
+
+Hyperlinks [GitHub Pages](https://pages.github.com/)
+
