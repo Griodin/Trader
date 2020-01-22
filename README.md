@@ -4,18 +4,17 @@
 Nodejs, JavaScript, HTML, CSS, ?
 
 ## Objectives:
-*[] End: Buiding a Trading Bot (Optimistic Goal) (Crypto, or maybe Stock as well)
-*[] 1: Build a Financial Chart with Indicators like EMA (Static Data)
-	*[] a: D3 seemed like a possible option
-*[] 2: Link Chart to RealTime data from a exchange api
-*[] 3: Store data in database for history tracking and trend analysis
-*[] 4: If possible find back data for 2+ years or more.
-*[] 5: Using the back data define a good buy/sell practice.
-*[] 6: Develop a strategy to get my result.
-*[] 7: Design a way to test strategy.
-*[] 8: Design a way to future test strategy.
-*[] 9: Impliment strategy.
-	* a: for strategy to go live it must be tested with back data, then live paper trade. (Workflow)
+- [] End: Buiding a Trading Bot (Optimistic Goal) (Crypto, or maybe Stock as well)
+- [] Build a Financial Chart with Indicators like EMA (Static Data)
+- [] Link Chart to RealTime data from a exchange api
+- [] Store data in database for history tracking and trend analysis
+- [] If possible find back data for 2+ years or more.
+- [] Using the back data define a good buy/sell practice.
+- [] Develop a strategy to get my result.
+- [] Design a way to test strategy.
+- [] Design a way to future test strategy.
+- [] Impliment strategy.
+- [] for strategy to go live it must be tested with back data, then live paper trade. (Workflow)
 
 This doesn't work but I am trying to get Nodejs, browserify, d3, d3fc to all work together.
 Open to suggestions, I am looking for simple.  This is only for learning how all these things work together.
@@ -73,7 +72,7 @@ Was unable to figure out how to add indicators, menus, etc. at this time.  Did t
 * Created the basic structure and started everything.  Not going to define everything that changed during this time.
 
 
-## Readme Notes:
+### Readme Notes:
 &#35;  #
 
 &#35; The largest Heading
