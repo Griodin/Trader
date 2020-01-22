@@ -4,18 +4,18 @@
 Nodejs, JavaScript, HTML, CSS, ?
 
 ## Objectives:
-[] - End: Buiding a Trading Bot (Optimistic Goal) (Crypto, or maybe Stock as well)
-[] Build a Financial Chart with Indicators like EMA (Static Data)
-[] Add Indicators like EMA, Menus, etc. to Chart.
-[] Link Chart to RealTime data from a exchange api
-[] Store data in database for history tracking and trend analysis
-[] If possible find back data for 2+ years or more.
-[] Using the back data define a good buy/sell practice.
-[] Develop a strategy to get my result.
-[] Design a way to test strategy.
-[] Design a way to future test strategy.
-[] Impliment strategy.
-[] for strategy to go live it must be tested with back data, then live paper trade. (Workflow)
+- [ ] End: Buiding a Trading Bot (Optimistic Goal) (Crypto, or maybe Stock as well)
+- [ ] Build a Financial Chart with Indicators like EMA (Static Data)
+- [ ] Add Indicators like EMA, Menus, etc. to Chart.
+- [ ] Link Chart to RealTime data from a exchange api
+- [ ] Store data in database for history tracking and trend analysis
+- [ ] If possible find back data for 2+ years or more.
+- [ ] Using the back data define a good buy/sell practice.
+- [ ] Develop a strategy to get my result.
+- [ ] Design a way to test strategy.
+- [ ] Design a way to future test strategy.
+- [ ] Impliment strategy.
+- [ ] for strategy to go live it must be tested with back data, then live paper trade. (Workflow)
 
 This doesn't work but I am trying to get Nodejs, browserify, d3, d3fc to all work together.
 Open to suggestions, I am looking for simple.  This is only for learning how all these things work together.
