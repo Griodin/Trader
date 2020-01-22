@@ -1,0 +1,8 @@
+﻿// Change/Copy file to config.js
+// Change As needed.
+// 
+require('dotenv').config();
+
+Token=''
+Account=''
+Password=''
